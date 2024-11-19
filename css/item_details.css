@@ -1,0 +1,7 @@
+@import "shared.css";
+/* Centering all of the book information */
+#detail_title {
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+}

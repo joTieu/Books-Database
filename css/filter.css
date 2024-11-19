@@ -1,0 +1,42 @@
+@import "shared.css";
+/* General body styling */
+body {
+    font-family: Arial, sans-serif; /* Default font */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    line-height: 1; /* Improve readability */
+    color: black; /* Dark text */
+    background-color: whitesmoke; /* Light background */
+}
+
+/* Main content area */
+main {
+    display: flex; /* Flex layout for content positioning */
+    justify-content: space-between; /* Space out content */
+    align-items: flex-start; /* Align items at the top */
+    padding: 1em;
+}
+
+table th {
+    padding: 20px;
+}
+
+td {
+    padding: 20px;
+}
+
+table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.favorite {
+    width: 25px;
+    height: 25px;
+}
+
+.favorite:hover {
+    content:url("../images/starfilled.png");
+    cursor: pointer;
+}

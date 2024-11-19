@@ -1,0 +1,39 @@
+@import "shared.css";
+/* General body styling */
+body {
+    font-family: Arial, sans-serif; /* Default font */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    line-height: 1; /* Improve readability */
+    color: black; /* Dark text */
+    background-color: whitesmoke; /* Light background */
+}
+
+/* Main content area */
+main {
+    display: flex; /* Flex layout for content positioning */
+    justify-content: space-between; /* Space out content */
+    align-items: flex-start; /* Align items at the top */
+    padding: 1em;
+}
+
+.filter-nav {
+    display: inline-block;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Form styling */
+form label {
+    display: block; /* Labels on their own line */
+    margin-top: 10px; /* Spacing above */
+}
+
+form input, form button {
+    display: block; /* Full width inputs and buttons */
+    margin-top: 5px; /* Spacing above */
+    padding: 0.5em; /* Add padding */
+    width: 100%; /* Full width */
+}

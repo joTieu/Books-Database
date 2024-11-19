@@ -1,0 +1,21 @@
+@import "shared.css";
+
+main {
+    display: block;
+}
+
+label {
+    display: inline-block;
+    text-align: right;
+    width: 200px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+}
+
+input {
+    text-align: left;
+    height: 25px;
+    width: 15%;
+    border-radius: 3px;
+    border: 1px solid;
+}
