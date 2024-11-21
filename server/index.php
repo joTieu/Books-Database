@@ -19,7 +19,7 @@
             </section>
 
             <section class="image-container">
-                <img src="../images/book3.jpg" alt="Book catalog" id="home-image">
+                <img src="../images/bookmain.jpeg" alt="Book catalog" id="home-image">
 
             </section>
         </main>

@@ -5,7 +5,7 @@
         <script src="../js/index.js"></script>
         <!-- Link CSS styles via <link> -->
         <link href="../css/catalog.css" rel="stylesheet">
-        <title>Book Catalogue</title>
+        <title>Book Catalog</title>
         <?php 
             include_once("./database/database_creation.php");
             include_once("./database/database_table_creation.php");

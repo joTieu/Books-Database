@@ -24,11 +24,15 @@
 
                 // Verify if account info exists in database
                 $getLoginQuery = $connection->query("SELECT customerName, customerPass, email FROM Customers");
-                $getLoginTable = $getLoginQuery->fetch_assoc();
-                if(($getLoginTable["customerName"] === $user) || ($getLoginTable["email"] === $email)) {
-                    echo("<p>Username or email already exists.<br> Click <a href='./register.php'>here</a> to return to registration</p>");
-                } else {
+                if ($getLoginQuery->num_rows < 1) {
                     echo("<p>Successfully registered.<br> Click <a href='./index.php'>here</a> to return home</p>");
+                } else {
+                    $getLoginTable = $getLoginQuery->fetch_assoc();    
+                    if(($getLoginTable["customerName"] === $user) || ($getLoginTable["email"] === $email)) {
+                        echo("<p>Username or email already exists.<br> Click <a href='./register.php'>here</a> to return to registration</p>");
+                    } else {
+                        echo("<p>Successfully registered.<br> Click <a href='./index.php'>here</a> to return home</p>");
+                    }
                 }
                 // Add customer login to database
                 $addCustomer = "INSERT IGNORE INTO Customers(customerName, customerPass, email) VALUES ('".$user."', '".$pass."', '".$email."')";

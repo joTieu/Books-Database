@@ -5,3 +5,49 @@
     margin: auto;
     margin-top: 15px;
 }
+
+main {
+    display: block;
+    text-align: center;
+}
+
+main h1 {
+    margin-bottom: 0px;
+}
+
+main h2 {
+    margin-top: 0px;
+}
+
+.details {
+    float: right;
+    margin-left: 10em;
+    padding: 25px;
+    border: 2px solid rgb(230, 230, 230);
+    border-radius: 10px;
+    width: 35%;
+}
+
+.flexwrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.flexwrap img {
+    width: 750px;
+    height: auto;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.img_section {
+    text-align: center;
+}
+
+form {
+    margin-top: 25%;
+    margin-bottom: 15px;
+}

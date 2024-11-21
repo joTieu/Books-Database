@@ -6,7 +6,7 @@
         <script src="../js/index.js"></script>
         <!-- Link CSS styles via <link> -->
         <link href="../css/register.css" rel="stylesheet">
-        <title>Book Catalogue Registration</title>
+        <title>Account Registration</title>
         <script src="../js/create.js" defer></script>
     </head>
     <body>

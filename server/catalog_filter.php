@@ -61,7 +61,6 @@
                     <th>Book Title</th>
                     <th>Author</th>
                     <th>Genre</th>
-                    <th>Favorite</th>
                 </tr>
                 <?php 
                 $tableResult = $connection->query(filterTable($author, $genre, $title));
@@ -69,7 +68,6 @@
                     echo("<tr>");
                     // TODO: Make a dynamic product/item detail page
                     echo("<td>".$tableList["bookID"]."</td><td><a href='item_details.php?id=".$tableList["bookID"]."'>".$tableList["bookTitle"]."</a></td><td>".$tableList["authorName"]."</td><td>".$tableList["genreName"]);
-                    echo("<td><img src='../images/star.png' class='favorite' alt = 'favorite star'/></td>");
                 }
                 ?>
             </table>

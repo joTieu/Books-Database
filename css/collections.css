@@ -1,0 +1,15 @@
+@import "filter.css";
+.remove {
+    width: 40px;
+    height: auto;
+}
+
+table th {
+    width: 250px;
+}
+
+#collection-wrap {
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+}
