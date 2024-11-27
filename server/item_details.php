@@ -21,21 +21,25 @@
             <div class="flexwrap">
                 <!-- Populate content about item details -->
                 <div class="image_section">
-                    <img src="../images/bookpreview.jpg" alt="image of an open book"/>
+                    <?php
+                        $bookID = (int)$_GET["id"];
+                        $detailQuery = "SELECT bookTitle, bookDesc, rating, authorName, bookImagePath
+                        FROM Books 
+                        INNER JOIN Authors ON Books.authorID = Authors.authorID
+                        WHERE bookID = $bookID";
+                        $bookInfo = $connection->query($detailQuery)->fetch_assoc();
+                        $bookImagePath = $bookInfo["bookImagePath"];
+                        echo "<img src='$bookImagePath' alt='Image of ".$bookInfo["bookTitle"]."' class='book-image'/>";
+                    ?>
+                    <!-- <img src="../images/bookpreview.jpg" alt="image of an open book"/> -->
                 </div>
                 <div class="details">
                     <?php
-                        $bookID = (int)$_GET["id"];
                         $tempTable = $connection->query("SELECT bookID from Books");
                         // Check if bad ID injection via URL
                         if(($bookID < 1) || ($bookID > $tempTable->num_rows)) {
                             header("Location: catalog.php");
                         }
-                        $detailQuery = "SELECT bookTitle, bookDesc, rating, authorName
-                        FROM Books 
-                        INNER JOIN Authors ON Books.authorID = Authors.authorID
-                        WHERE bookID = $bookID";
-                        $bookInfo = $connection->query($detailQuery)->fetch_assoc();
                         
                         // Book Title
                         echo("<h1 id='detail_title'>".$bookInfo["bookTitle"]."</h1><br>");
@@ -49,7 +53,7 @@
                         $ratingTotal = $rateTable["rating"];
                         $ratingCounts = $rateTable["countedRatings"];
                         if ($ratingCounts > 0) {
-                            $rateAverage = (double)($ratingTotal / $ratingCounts);
+                            $rateAverage = round((double)($ratingTotal / $ratingCounts), 2);
                             echo("<h3>Rating: <span class='rating-display'>$rateAverage / 5</span></h3>");
                         } else {
                             echo("<h3>Rating: <span class='rating-display'>No reviews</span></h3>");
@@ -77,7 +81,7 @@
                                     }
                                 ?>
                             </tr>
-                        </table><br>
+                        </table>
                         <input type="submit" value="Add Rating"/>
                     </form>
                     <form action="added_collection.php" onsubmit="return filter_details()" method="POST">

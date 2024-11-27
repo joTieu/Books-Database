@@ -15,22 +15,30 @@
             <?php require("../pages/header.html"); ?>
         </header>
         <main>
-            <h1>Account Registration</h1><br>
-            <form action="registerSuccess.php" method="POST" onsubmit="return validateUser()">
-                <label for="user">Enter Username</label>
-                <input type="text" id="user" name="user" required/><br>
+            
+            <div class="container">
+            <h1>Welcome</h1>
+            <hr>
+                <div class="form-container">
+                    <form action="registerSuccess.php" method="POST" onsubmit="return validateUser()">
+                        <label for="user"><strong>Enter Username</strong></label>
+                        <input type="text" id="user" name="user" required/><br>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required/><br>
-            
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required/><br>
-            
-                <label for="confirm_password">Confirm Password:</label>
-                <input type="password" id="confirm_password" name="confirm_password" required/><br>
-            
-                <button type="submit">Register</button>
-            </form>
+                        <label for="email"><strong>Email:</strong></label>
+                        <input type="email" id="email" name="email" required/><br>
+                    
+                        <label for="password"><strong>Password:</strong></label>
+                        <input type="password" id="password" name="password" required/><br>
+                    
+                        <label for="confirm_password"><strong>Confirm Password:</strong></label>
+                        <input type="password" id="confirm_password" name="confirm_password" required/><br>
+                    
+                        <button type="submit">Register</button>
+                    </form>
+                </div>
+
+
+            </div>
         </main>
         <footer>
             <?php require("../pages/footer.html"); ?>
