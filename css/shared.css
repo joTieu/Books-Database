@@ -6,7 +6,7 @@ header {
     background-repeat: no-repeat; /* Prevents repeating */
     color: whitesmoke; /* Text color to contrast with the background */
     text-align: center; /* Center align the text */
-    padding: 2em 0; /* Add space around the content */
+    padding: 10px 0; /* Add space around the content */
     font-family: Arial, sans-serif; /* Optional: Consistent font */
     margin: 0;
 }
@@ -40,11 +40,13 @@ main {
 
 /* Footer styling */
 footer {
-    background-color: orange; /* Blue background */
-    color: white; /* White text */
-    text-align: center; /* Center-align text */
-    padding: 1em 0; /* Padding for spacing */
-    position: fixed; /* Fix at bottom */
-    width: 100%; /* Full width */
-    bottom: 0; /* Stick to the bottom */
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    display: block;
+
+    position: absolute;
+    bottom: 0;
 }
