@@ -26,8 +26,12 @@
     $booksTable = "CREATE TABLE IF NOT EXISTS Books (
     bookID int NOT NULL,
     bookTitle varchar(255) NOT NULL UNIQUE,
+    bookDesc varchar(255),
     authorID int NOT NULL,
     genreID int NOT NULL,
+    rating int NOT NULL,
+    countedRatings int NOT NULL,
+    bookImagePath varchar(255),
     PRIMARY KEY (bookID),
     FOREIGN KEY (authorID) REFERENCES Authors(authorID),
     FOREIGN KEY (genreID) REFERENCES Genres(genreID)
@@ -65,25 +69,13 @@
     (7, 'Fictional')";
     $connection->query($addGenre);
 
-    // Add Books: bookID, bookTitle, authorID, genreID
+    // Add Books: bookID, bookTitle, bookDesc, authorID, genreID, rating, reviews, image
     $addBook = "INSERT IGNORE INTO Books VALUES
-    (1, 'Harry Potter Part 1', 1, 4),
-    (2, 'Lifetime of Us', 2, 3),
-    (3, 'Goosebumps', 3, 1),
-    (4, 'Detective Smith on the Case', 4, 5),
-    (5, 'Harry Potter Part 2', 1, 5),
-    (6, 'Love in a Hometown World', 2, 4)";
+    (1, 'Harry Potter Part 1', 'The beginnings of Harry Potter in the high-action magical world', 1, 4, 0, 0, '../images/1-Harry Potter Part 1.jpg'),
+    (2, 'Lifetime of Us', 'The following of couple whose lives have taken a turn', 2, 3, 0, 0, '../images/lifetime of us.jpg'),
+    (3, 'Goosebumps', 'The mysterious horror leaving you a sense of GOOSEBUMPS!', 3, 1, 0, 0, '../images/3-Goosebumps.jpg'),
+    (4, 'Detective Smith on the Case', 'Join detective Smith as he takes on the the unsolved mysteries', 4, 5, 0, 0, '../images/4-Detective Smith on the Case.jpg'),
+    (5, 'Harry Potter Part 2', 'Harry Potter\'s journeys continues in an mysterious turn!', 1, 5, 0, 0, '../images/5-Harry Potter Part 2.jpg'),
+    (6, 'Love in a Hometown World', 'The loving feeling in an high-action world', 2, 4, 0, 0, '../images/bookpreview.jpg')";
     $connection->query($addBook);
-
-// $filter = "SELECT Books.bookID, Books.bookTitle, Authors.authorName, Genres.genreName 
-// from Books 
-// inner join Authors on Books.authorID = Authors.authorID
-// inner join Genres on Books.genreID = Genres.genreID
-// where Authors.authorName = {$author} 
-// AND Genres.genreName = {$genre} 
-// AND Books.bookTitle = {$title}";
-
-// if ($connection->query($filter) === false) {
-//     echo("Filter failed");
-// }
 ?>

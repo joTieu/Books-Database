@@ -14,13 +14,18 @@
         <!-- Main content area -->
         <main>
             <section class="container">
-                <h2>Discover Your Next Favorite Book</h2>
-                <p>Browse our extensive catalog and join our community!</p>
-            </section>
+                <div class="text-section">
+                    <h2>Discover Your Next Favorite Book</h2>
+                    
+                    <p>Dive into a world of stories, knowledge, and imagination. 
+                    <p>Explore our extensive catalog of books across genres, discover your next favorite read, and connect with a community of book enthusiasts.</p>
+                    <p>Whether you're looking for timeless classics, modern thrillers, or insightful non-fiction, Book Haven has something for everyone.</p>
+                    <p>Start your reading journey today!</p>
+                </div>
 
-            <section class="image-container">
-                <img src="../images/book3.jpg" alt="Book catalog" id="home-image">
-
+                <div class="image-container">
+                    <img src="../images/homepage.jpg" alt="Book catalog" id="home-image">
+                </div>
             </section>
         </main>
         <footer>

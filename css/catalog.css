@@ -1,4 +1,6 @@
+
 @import "shared.css";
+
 /* General body styling */
 body {
     font-family: Arial, sans-serif; /* Default font */
@@ -12,28 +14,68 @@ body {
 /* Main content area */
 main {
     display: flex; /* Flex layout for content positioning */
-    justify-content: space-between; /* Space out content */
-    align-items: flex-start; /* Align items at the top */
-    padding: 1em;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 1em; /* Space around content */
 }
 
+/* Filter navigation styling */
 .filter-nav {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    background: white; /* White background for the container */
+    padding: 50px; /* Padding inside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    text-align: left; /* Align text to the left */
     margin: auto;
-    align-items: center;
-    text-align: center;
 }
-
 
 /* Form styling */
 form label {
     display: block; /* Labels on their own line */
     margin-top: 10px; /* Spacing above */
+    font-size: 0.9em; /* Font size consistent with registration form */
+    color: #555; /* Subtle text color */
 }
 
-form input, form button {
-    display: block; /* Full width inputs and buttons */
-    margin-top: 5px; /* Spacing above */
-    padding: 0.5em; /* Add padding */
-    width: 100%; /* Full width */
+form input, form select {
+    display: block; /* Full-width inputs and dropdowns */
+    margin-top: 15px; /* Spacing above */
+    padding: 10px; /* Add padding for comfort */
+    width: calc(100% - 20px); /* Full width with padding */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em; /* Consistent font size */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
+
+/* Larger Book Title Input */
+form input[name="title"] {
+    font-size: 1.5em; /* Increase font size */
+    padding: 12px; /* Add extra padding */
+    height: auto; /* Adjust height if needed */
+}
+
+/* Button styling */
+form input[type="submit"] {
+    margin-top: 20px; /* Spacing above */
+    padding: 10px 15px; /* Padding */
+    background-color: grey; /* Grey button */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    text-align: center; /* Center text */
+    font-weight: bold; /* Bold text */
+}
+
+/* Hover effect for the button */
+form input[type="submit"]:hover {
+    background-color: orange; /* Orange background on hover */
+}
+
+

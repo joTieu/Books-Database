@@ -17,7 +17,7 @@
 
     // Setting up database
 
-    // Debug database refresh (not to be kept in final version)
+    // DEBUG Statement: Database refresh on table changes (not to be kept in final version)
     // $connection->query("DROP DATABASE $name");
 
     $connection->query("CREATE DATABASE IF NOT EXISTS $name");

@@ -1,21 +1,73 @@
 @import "shared.css";
 
+
 main {
-    display: block;
+    display: flex; 
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+}
+
+/* Main container */
+.container {
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+/* Form container */
+.form-container {
+    width: 100%;
+    text-align: left;
 }
 
 label {
-    display: inline-block;
-    text-align: right;
-    width: 200px;
-    margin-bottom: 20px;
-    margin-right: 25px;
+    display: block;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    color: #555;
 }
 
 input {
-    text-align: left;
-    height: 25px;
-    width: 15%;
-    border-radius: 3px;
-    border: 1px solid;
+    width: calc(100% - 20px); 
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: grey; /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: orange; /* Darker blue on hover */
+}
+
+
+
+
+/* show  error messages */
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 10px;
 }

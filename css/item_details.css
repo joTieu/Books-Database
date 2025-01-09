@@ -5,3 +5,64 @@
     margin: auto;
     margin-top: 15px;
 }
+
+main {
+    display: block;
+    text-align: center;
+}
+
+main h1 {
+    margin-bottom: 0px;
+}
+
+main h2 {
+    margin-top: 0px;
+}
+
+.details {
+    float: right;
+    margin-left: 10em;
+    padding: 25px;
+    border: 2px solid rgb(230, 230, 230);
+    border-radius: 10px;
+    width: 35%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.image_section {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.flexwrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.flexwrap img {
+    width: auto;
+    height: 500px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.img_section {
+    text-align: center;
+}
+
+form {
+    margin-top: 15%;
+    margin-bottom: 5px;
+}
+
+table {
+    margin: auto;
+}
+
+#ratings {
+    justify-content: center;
+}

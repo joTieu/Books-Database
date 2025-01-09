@@ -5,7 +5,7 @@
         <script src="../js/index.js"></script>
         <!-- Link CSS styles via <link> -->
         <link href="../css/catalog.css" rel="stylesheet">
-        <title>Book Catalogue</title>
+        <title>Book Catalog</title>
         <?php 
             include_once("./database/database_creation.php");
             include_once("./database/database_table_creation.php");
@@ -18,8 +18,9 @@
         </header>
         <main>
             <div class = "filter-nav">
+                <h2>Book Lookup</h2><hr>
                 <form action="catalog_filter.php" onsubmit="return filter()" method="POST">
-                    <label for="authors">Authors</label>
+                    <label for="authors"><strong>Authors</strong></label>
                     <select name="authors">
                         <option value="0" disable selected>Select Author</option>
                         <?php
@@ -29,9 +30,9 @@
                             }
                         ?>
                     </select><br>
-                    <label for="genres">Genres</label>
+                    <label for="genres"><strong>Genres</strong></label>
                     <select name="genres">
-                        <option value="0" disable selected>Select Author</option>
+                        <option value="0" disable selected>Select Genre</option>
                             <?php
                             $genreSearch = $connection->query("SELECT * FROM Genres ORDER BY genreName");
                                 while ($genreList = $genreSearch->fetch_assoc()) {
@@ -39,7 +40,7 @@
                                 }
                             ?>
                     </select><br>
-                    <label for="title">Book Title</label>
+                    <label for="title"><strong>Book Title</strong></label>
                     <input type="text" placeholder="Enter Book Title" name="title"><br>
                     <input type="submit" value="Search Books"/>
                 </form>
